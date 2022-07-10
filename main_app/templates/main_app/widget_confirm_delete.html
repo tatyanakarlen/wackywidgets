@@ -1,0 +1,12 @@
+
+{% block content %}
+ 
+
+  <h5>Are you sure you want to delete?</h5>
+
+  <form action="{% url 'widget_delete' widget.id %}" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'wacky_widgets' %}">Cancel</a>
+    <input type="submit" value=" Delete">
+  </form>
+{% endblock %}

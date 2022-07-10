@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Widget
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from .forms import AddWidgetForm
 
 # Create your views here.
@@ -19,6 +19,10 @@ def index(request):
 class widget_create(CreateView):
   model = Widget
   fields = '__all__'
+  success_url = '/wackywidgets/'
+
+class widget_delete(DeleteView):
+  model = Widget
   success_url = '/wackywidgets/'
 
 
