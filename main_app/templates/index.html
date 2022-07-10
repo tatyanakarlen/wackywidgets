@@ -22,12 +22,12 @@
 {% endif %}
 <hr>
 <h4>Add Widget</h4>
-<form action="" method="POST">
+<form class="pure-form" action="{% url 'widget_create' %}" method="POST">
   {% csrf_token %}
   
   {{ add_widget_form.as_p }}
 
-  <input type="submit" value="Add" class="btn">
+  <input type="submit" value="Add" class="pure-button">
 </form>
 </body>
 </html>
