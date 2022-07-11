@@ -13,8 +13,16 @@ table a {
     text-decoration: none;
 }
 
+td:nth-child(2),
+td:nth-child(3)  {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 label {
     display: inline-block;
     width: 100px;
     text-align: right;
 }
+
